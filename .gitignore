@@ -7,6 +7,10 @@ dermoscopic_images/test/unknown
 dermoscopic_images/train/benign
 dermoscopic_images/train/malignant
 dermoscopic_images/train/unknown
+.ipynb_checkpoints/
+dermoscopic_images/.DS_Store
+dermoscopic_images/test/.DS_Store
+
 
    
 # Byte-compiled / optimized / DLL files
