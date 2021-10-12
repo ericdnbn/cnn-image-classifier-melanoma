@@ -1,2 +1,10 @@
 .DS_Store
-dermoscopic_images/
+dermoscopic_images
+dermoscopic_images/train/
+dermoscopic_images/test/
+dermoscopic_images/test/benign
+dermoscopic_images/test/malignant
+dermoscopic_images/test/unknown
+dermoscopic_images/train/benign
+dermoscopic_images/train/malignant
+dermoscopic_images/train/unknown
