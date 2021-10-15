@@ -10,7 +10,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras import models, layers
 from keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Flatten, Activation, BatchNormalization
 from keras.regularizers import l2
-from keras.optimizers import Adam, SGD
+from tensorflow.keras.optimizers import Adam, SGD
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.utils import class_weight
 
@@ -530,8 +530,8 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 	loss = history.history['loss']
 	val_loss = history.history['val_loss']
 
-	#recall = history.history['recall']
-	#val_recall = history.history['val_recall']
+	recall = history.history['recall']
+	val_recall = history.history['val_recall']
 
 	epochs = range(len(acc))
 	plt.plot(epochs, acc, 'bo', label='Training accuracy')
@@ -544,11 +544,11 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 	plt.title('Training and validation loss')
 	plt.legend()
 	plt.figure()
-	#plt.plot(epochs, recall, 'bo', label='Training recall')
-	#plt.plot(epochs, val_recall, 'b', label='Validation recall')
-	#plt.title('Training and validation recall')
-	#plt.legend()
-	plt.show()
+	plt.plot(epochs, recall, 'bo', label='Training recall')
+	plt.plot(epochs, val_recall, 'b', label='Validation recall')
+	plt.title('Training and validation recall')
+	plt.legend()
+	plt.show();
 
 	print('')
 	print('Training Evaluation:')
@@ -559,11 +559,11 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 
 
 	if multi:
+   
 
-		predictions = (model.predict_classes(val_generator))     
+		preds = np.argmax(model.predict(val_generator), -1)
 
-		preds = np.argmax(predictions)
-
+		
 		cm = confusion_matrix(val_generator.classes, preds)
 
 
