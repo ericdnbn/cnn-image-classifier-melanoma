@@ -570,7 +570,7 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 		cmd = ConfusionMatrixDisplay(cm, display_labels=labels)
 
 		print('')
-		print('Test Confusion Matrix')
+		print('Validation Confusion Matrix')
 		print('')
 		cmd.plot();
 
@@ -586,7 +586,7 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 		cmd = ConfusionMatrixDisplay(cm, display_labels=labels)
 
 		print('')
-		print('Test Confusion Matrix')
+		print('Validation Confusion Matrix')
 		print('')
 		cmd.plot();
 
