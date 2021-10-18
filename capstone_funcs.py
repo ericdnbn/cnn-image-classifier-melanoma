@@ -191,8 +191,8 @@ def visualize_nn(history, model, train_generator, val_generator, multi=None, lab
 	loss = history.history['loss']
 	val_loss = history.history['val_loss']
 
-	#recall = history.history['recall']
-	#val_recall = history.history['val_recall']
+	recall = history.history['recall']
+	val_recall = history.history['val_recall']
 
 	epochs = range(len(acc))
 	plt.plot(epochs, acc, 'bo', label='Training accuracy')
@@ -205,10 +205,10 @@ def visualize_nn(history, model, train_generator, val_generator, multi=None, lab
 	plt.title('Training and validation loss')
 	plt.legend()
 	plt.figure()
-	#plt.plot(epochs, recall, 'bo', label='Training recall')
-	#plt.plot(epochs, val_recall, 'b', label='Validation recall')
-	#plt.title('Training and validation recall')
-	#plt.legend()
+	plt.plot(epochs, recall, 'bo', label='Training recall')
+	plt.plot(epochs, val_recall, 'b', label='Validation recall')
+	plt.title('Training and validation recall')
+	plt.legend()
 	plt.show()
 
 
@@ -232,7 +232,7 @@ def visualize_nn(history, model, train_generator, val_generator, multi=None, lab
 		cmd = ConfusionMatrixDisplay(cm, display_labels=labels)
 
 		print('')
-		print('Test Confusion Matrix')
+		print('Validation Confusion Matrix')
 		print('')
 		cmd.plot();
 
@@ -248,7 +248,7 @@ def visualize_nn(history, model, train_generator, val_generator, multi=None, lab
 		cmd = ConfusionMatrixDisplay(cm, display_labels=labels)
 
 		print('')
-		print('Test Confusion Matrix')
+		print('Validation Confusion Matrix')
 		print('')
 		cmd.plot();
 
