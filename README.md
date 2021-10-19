@@ -2,7 +2,9 @@
 
 ### Author: Eric Denbin
 
-![examining biopsy example](images/derma.jpeg)
+<p align="center">
+  <img src=images/derma.jpeg />
+</p>
 
 ## Business Understanding
 
