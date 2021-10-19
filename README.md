@@ -12,7 +12,7 @@ Skin cancer is the most common form of cancer in the United States and worldwide
 
 Specific types of skin lesions are usually diagnosed through biopsies, serial imaging, or single image expert consensus. 
 
-It is estimated that in 2018, biopsies of benign tumors cost between $624 million and $1.7 billion(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903)
+It is estimated that in 2018, biopsies of benign tumors cost between $624 million and $1.7 billion(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
 
 
 
