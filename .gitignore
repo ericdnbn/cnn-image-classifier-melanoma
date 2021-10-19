@@ -148,6 +148,6 @@ dmypy.json
 
 # Dataset and models
 #*.jpeg
-*.jpg
+#*.jpg
 *.zip
 *.h5
