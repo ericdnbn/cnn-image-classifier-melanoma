@@ -147,7 +147,7 @@ dmypy.json
 *.DS_Store
 
 # Dataset and models
-*.jpeg
+#*.jpeg
 *.jpg
 *.zip
 *.h5
