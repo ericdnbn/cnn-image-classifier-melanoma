@@ -2,7 +2,7 @@
 
 ### Author: Eric Denbin
 
-![healthy vs penumonia cxr](images/derma.jpeg)
+![examining biopsy example](images/derma.jpeg)
 
 ## Business Understanding
 
