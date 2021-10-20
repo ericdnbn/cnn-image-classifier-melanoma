@@ -20,12 +20,6 @@ According to a study published in April of 2021 in the Dermatology Research and 
 
 My dataset consists of 7,179 dermoscopic images from the Internation Skin Imaging Collaboration(ISIC) archive (https://www.isic-archive.com/). All patients were 10-90 years old and the images were taken in the course of clinical care.
 
-The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality in regard to the data. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 600 images of benign lesions for testing. I downloaded 1500 images of malignant lesions for training and validation, and 600 for testing. For unkown lesions, I downloaded 1500 images for training and validation, and 600 for testing.
-
-<p align="center">
-  <img src='images/skin_lesion_class_balance.png' width=450 height=400 />
-</p>
-
 The following file structure provides the ground truth labeling needed to train the models. If you wish to run my code, you will need to download images from the ISIC archive into the same directory format:
 ```
 └── dermoscopic_images
@@ -39,11 +33,19 @@ The following file structure provides the ground truth labeling needed to train 
          └──unknown
 ```
 
+The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality in regard to the data. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 600 images of benign lesions for testing. I downloaded 1500 images of malignant lesions for training and validation, and 600 for testing. For unkown lesions, I downloaded 1500 images for training and validation, and 600 for testing. The class balance in my training set is 44% images of benign lesions, 28% images of malignant lesions, and 28% images of unknown lesions.
+
+<p align="center">
+  <img src='images/skin_lesion_class_balance.png' width=450 height=400 />
+</p>
+
 
 
 ## Modeling with neural networks
 
-![fsm](images/confusion_matrix_fsm)
+<p align="center">
+  <img src=images/confusion_matrix_fsm />
+</p>
 
 My first simple model consists of a basic fully connected dense neural network with two hidden layers, plus an output layer. 
 This model serves mainly as a proof of concept and provides baseline accuracy and recall scores.
@@ -57,7 +59,9 @@ To improve on my first simple model, I began iterating on convoluational neural 
  - Using L2 regularization to avoid overfitting
  - Trying different kernel sizes
 
-![confusion matrix best cnn](images/confusion_matrix_best_cnn)
+<p align="center">
+  <img src=images/confusion_matrix_best_cnn />
+</p>
 
 *How iterations improved model*
 
