@@ -44,7 +44,7 @@ The ISIC archive contains over 150,000 images, 70,000 of which have been made pu
 ## Modeling with neural networks
 
 <p align="center">
-  <img src=images/confusion_matrix_fsm />
+  <img src=images/confusion_matrix_fsm.png />
 </p>
 
 My first simple model consists of a basic fully connected dense neural network with two hidden layers, plus an output layer. 
@@ -60,7 +60,7 @@ To improve on my first simple model, I began iterating on convoluational neural 
  - Trying different kernel sizes
 
 <p align="center">
-  <img src=images/confusion_matrix_best_cnn />
+  <img src=images/confusion_matrix_best_cnn.png />
 </p>
 
 *How iterations improved model*
