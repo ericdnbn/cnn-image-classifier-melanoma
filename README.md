@@ -52,7 +52,7 @@ The following is the confusion matrix it produced:
   <img src='images/confusion_matrix_fsm.png' width=600 height=375 />
 </p>
 
-To improve on my first simple model, I began iterating on convoluational neural networks. The following represents various different improvements made over these iterations:
+To improve on my first simple model, I began iterating on convolutional neural networks. The following represents various different improvements made over these iterations:
  - Using the full dataset
  - Adding more dense layers to improve the power of the network
  - Adding convolutional layers to improve pattern recognition
