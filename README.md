@@ -43,12 +43,14 @@ The ISIC archive contains over 150,000 images, 70,000 of which have been made pu
 
 ## Modeling with neural networks
 
-<p align="center">
-  <img src=images/confusion_matrix_fsm.png />
-</p>
-
 My first simple model consists of a basic fully connected dense neural network with two hidden layers, plus an output layer. 
-This model serves mainly as a proof of concept and provides baseline accuracy and recall scores.
+This model serves as a proof of concept and provides baseline metrics.
+
+The following is the confusion matrix it produced:
+
+<p align="center">
+  <img src='images/confusion_matrix_fsm.png' width=450 height=350 />
+</p>
 
 To improve on my first simple model, I began iterating on convoluational neural networks. The following represents various different improvements made over these iterations:
  - Using the full dataset
@@ -59,8 +61,10 @@ To improve on my first simple model, I began iterating on convoluational neural 
  - Using L2 regularization to avoid overfitting
  - Trying different kernel sizes
 
+The following is the confusion matrix of my best performing CNN model:
+
 <p align="center">
-  <img src=images/confusion_matrix_best_cnn.png />
+  <img src='images/confusion_matrix_best_cnn.png' width=450 height=350 />
 </p>
 
 *How iterations improved model*
