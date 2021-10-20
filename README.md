@@ -49,7 +49,7 @@ This model serves as a proof of concept and provides baseline metrics.
 The following is the confusion matrix it produced:
 
 <p align="center">
-  <img src='images/confusion_matrix_fsm.png' width=450 height=400 />
+  <img src='images/confusion_matrix_fsm.png' width=500 height=400 />
 </p>
 
 To improve on my first simple model, I began iterating on convoluational neural networks. The following represents various different improvements made over these iterations:
@@ -64,7 +64,7 @@ To improve on my first simple model, I began iterating on convoluational neural 
 The following is the confusion matrix of my best performing CNN model:
 
 <p align="center">
-  <img src='images/confusion_matrix_best_cnn.png' width=450 height=400 />
+  <img src='images/confusion_matrix_best_cnn.png' width=500 height=400 />
 </p>
 
 *How iterations improved model*
