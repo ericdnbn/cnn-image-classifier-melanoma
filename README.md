@@ -64,7 +64,7 @@ To improve on my first simple model, I began iterating on convoluational neural 
 The following is the confusion matrix of my best performing CNN model:
 
 <p align="center">
-  <img src='images/confusion_matrix_best_cnn.png' width=525 height=400 />
+  <img src='images/confusion_matrix_best_cnn.png' width=540 height=400 />
 </p>
 
 *How iterations improved model*
