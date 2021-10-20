@@ -36,7 +36,7 @@ The following file structure provides the ground truth labeling needed to train 
 The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality in regard to the data. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 600 images of benign lesions for testing. I downloaded 1500 images of malignant lesions for training and validation, and 600 for testing. For unkown lesions, I downloaded 1500 images for training and validation, and 600 for testing. The class balance in my training set is 44% images of benign lesions, 28% images of malignant lesions, and 28% images of unknown lesions.
 
 <p align="center">
-  <img src='images/skin_lesion_class_balance.png' width=450 height=350 />
+  <img src='images/skin_lesion_class_balance.png' width=450 height=450 />
 </p>
 
 
@@ -49,7 +49,7 @@ This model serves as a proof of concept and provides baseline metrics.
 The following is the confusion matrix it produced:
 
 <p align="center">
-  <img src='images/confusion_matrix_fsm.png' width=450 height=350 />
+  <img src='images/confusion_matrix_fsm.png' width=450 height=450 />
 </p>
 
 To improve on my first simple model, I began iterating on convoluational neural networks. The following represents various different improvements made over these iterations:
