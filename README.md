@@ -8,21 +8,11 @@
 
 ## Business Understanding
 
-Skin cancer is the most common cancer in the United States and worldwide.
+Skin cancer is the most common form of cancer in the United States and worldwide. In the United States, more people are diagnosed with skin cancer each year than all other cancers combined.
 
-More people are diagnosed with skin cancer each year in the U.S. than all other cancers combined.
+Clinical diagnosis of skin lesions is done using single image expert consensus or serial imaging. If a lesion is suspected to be malignant, the specific type of lesion is determined through histopathological analysis of a biopsy. 
 
-Skin lesions, both benign and malignant, are typically diagnosed through clinical procedure, either using single image expert consensus or serial imaging.
-
-If a lesion is suspected to be malignant, the specific type of lesion is determined through histopathological analysis of a biopsy. 
-
-A study from April of 2021 found that 99.06% of patients with a clinical diagnosis of benign skin lesions were truly free of malignancy, while 30.38% of patients with a clinical diagnosis of skin cancer actually had the disease and 
-Clinical diagnoses are the first 
-
-It is estimated that in 2018, biopsies of benign tumors cost between $624 million and $1.7 billion
-
-
-It is estimated that in 2018, biopsies of benign tumors cost between $624 million and $1.7 billion(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
+According to a study published in April of 2021 in the Dermatology Research and Practice journal, 99.06% of the lesions clinically diagnosed as benign were actually benign, while 30.38% of the lesions clinically diagnosed as malignant were actually malignant(https://www.hindawi.com/journals/drp/2021/6618990). This means that less than 1% of the lesions diagnosed as benign in the study were actually malignant, and close to 70% of the lesions diagnosed as malignant in the study were actually benign. So while medical professionals are very precise when it comes to correctly diagnosing benign lesions, they are quite imprecise when it comes to correctly diagnosing malignant lesions. This makes sense given that medical professionals do not want to misdiagnose a malignant lesion as benign, but ultimately this imprecision makes clinical diagnosis somewhat inefficient. A study published in the Journal of Clinical Oncology in June of 2018, estimated that biopsies of benign tumors cost between $624 million and $1.7 billion(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
 
 
 
@@ -92,23 +82,22 @@ On unseen testing data...
 
 ### Recommendations
 
-I recommend that this model be used by medical professionals as part of the clinical diagnosis of skin lesions.
+- I recommend that this model be used by medical professionals as part of the clinical diagnosis of skin lesions.
 
-If a medical professional diagnoses a lesion as benign, I recommend that this model not be used, as their precision in making that diagnosis is more than 99%.
+- If a medical professional diagnoses a lesion as benign, I recommend that this model not be used, as their precision in making that diagnosis is more than 99%.
 
-If a medical professional diagnoses a lesion as malignant, I recommend that this model be used to confirm or reject that clinical diagnosis, as their precision in making that diagnosis is ~30%
+- If a medical professional diagnoses a lesion as malignant, I recommend that this model be used to confirm or reject that clinical diagnosis, as their precision in making that diagnosis is ~30%
 
-I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
-
-
-
+- I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
 
 
 ### Possible Next Steps
 
-- Round out the ISIC archive with more dermoscopic images of malignant skin lesions(basal cell carcinoma, squamous cell carcinmoa)
+- Get more dermoscopic images of those skin conditions in the archive that are underrepresented 
 
-- Create a classifier that can idneitfy specific lesions, not just the risk they pose(benign, malignant, unknown)
+- Train a binary classifier that predicts only benign and malignant lesions
+
+- Train a multiclass classifier that predicts specific types of lesions
 
 
 
