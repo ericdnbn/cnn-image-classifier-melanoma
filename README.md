@@ -8,9 +8,19 @@
 
 ## Business Understanding
 
-Skin cancer is the most common form of cancer in the United States and worldwide. More people are diagnosed with skin cancer each year in the U.S. than all other cancers combined. 
+Skin cancer is the most common cancer in the United States and worldwide.
 
-Specific types of skin lesions are usually diagnosed through biopsies, serial imaging, or single image expert consensus. 
+More people are diagnosed with skin cancer each year in the U.S. than all other cancers combined.
+
+Skin lesions, both benign and malignant, are typically diagnosed through clinical procedure, either using single image expert consensus or serial imaging.
+
+If a lesion is suspected to be malignant, the specific type of lesion is determined through histopathological analysis of a biopsy. 
+
+A study from April of 2021 found that 99.06% of patients with a clinical diagnosis of benign skin lesions were truly free of malignancy, while 30.38% of patients with a clinical diagnosis of skin cancer actually had the disease and 
+Clinical diagnoses are the first 
+
+It is estimated that in 2018, biopsies of benign tumors cost between $624 million and $1.7 billion
+
 
 It is estimated that in 2018, biopsies of benign tumors cost between $624 million and $1.7 billion(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
 
@@ -82,11 +92,16 @@ On unseen testing data...
 
 ### Recommendations
 
-- I recommend that this model be used by medical professionals to screen patients who are having skin lesions examined.
+I recommend that this model be used by medical professionals as part of the clinical diagnosis of skin lesions.
 
-- I recommend that this model be used to reduce the number of biopsies taken of benign lesions.
+If a medical professional diagnoses a lesion as benign, I recommend that this model not be used, as their precision in making that diagnosis is more than 99%.
 
-- Finally I recommend that this model be used to expedite the process of serial imaging, and replace single image expert consensus
+If a medical professional diagnoses a lesion as malignant, I recommend that this model be used to confirm or reject that clinical diagnosis, as their precision in making that diagnosis is ~30%
+
+I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
+
+
+
 
 
 ### Possible Next Steps
