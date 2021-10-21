@@ -52,13 +52,12 @@ The following is the confusion matrix it produced:
   <img src='images/confusion_matrix_fsm.png' width=600 height=375 />
 </p>
 
-To improve on my first simple model, I began iterating on convolutional neural networks. The following represents various different improvements made over these iterations:
- - Using the full dataset
- - Adding more dense layers to improve the power of the network
- - Adding convolutional layers to improve pattern recognition
- - Adding dropout layers to reduce computational workload and overfitting
- - Adding batch normalization layers to reduce computational workload and overfitting
- - Using L2 regularization to avoid overfitting
+To improve on my first simple model, I began iterating on convolutional neural networks. The following are various adjustments made over these iterations to improve model performance:
+ - Adding more dense layers
+ - Adding convolutional layers
+ - Adding dropout layers
+ - Adding batch normalization layers
+ - Using L2 regularization
  - Trying different kernel sizes
 
 The following is the confusion matrix of my best performing CNN model:
@@ -69,9 +68,9 @@ The following is the confusion matrix of my best performing CNN model:
 
 *How iterations improved model*
 
-I continued to iterate with the pre-trained 'imagenet' model, adding more layers, including:
- - Introducing `BatchNormalization` layers, which reduce the range of input values to speed training and improve performance
- - Adjusting number of layers to change the complexity of the model
+Once the performance of the convolutional neural networks I trained using custom architecture plateaued, I began exploring transfer learning. For the first iteration, I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
+ - Increasing the number of dense layers 
+ - Increasing the number of nodes in the first hidden layer with each additional layer
 
  
 Collectively, I iterated through ten models, adjusting these features parameters among others. My final model has the following architecture:
