@@ -97,20 +97,20 @@ On unseen testing data...
 
 - I recommend that this model be used by medical professionals as part of the clinical diagnosis of skin lesions.
 
-- If a medical professional diagnoses a lesion as benign, I recommend that this model not be used, as their precision in making that diagnosis is more than 99%.
+- I recommend that if a medical professional diagnoses a lesion as benign, I recommend that this model not be used, as their precision in making that diagnosis is   more than 99%.
 
-- If a medical professional diagnoses a lesion as malignant, I recommend that this model be used to confirm or reject that clinical diagnosis, as their precision in making that diagnosis is ~30%
+- I recommend that if a medical professional diagnoses a lesion as malignant, I recommend that this model be used to confirm or reject that clinical diagnosis, as   their precision in making that diagnosis is ~30%
 
 - I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
 
 
-### Possible Next Steps
+### Next Steps
 
 - Get more dermoscopic images of those skin conditions in the archive that are underrepresented 
 
 - Train a binary classifier that predicts only benign and malignant lesions
 
-- Train a multiclass classifier that predicts specific types of lesions
+- Train a multiclass classifier that predicts specific types of lesions, such as melanoma, basal cell carcinoma, squamous cell caricnoma, etc.
 
 
 
