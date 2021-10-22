@@ -10,15 +10,19 @@
 
 Skin cancer is the most common form of cancer in the United States and worldwide. In the United States, more people are diagnosed with skin cancer each year than all other cancers combined.
 
-Clinical diagnosis of skin lesions is done using single image expert consensus or serial imaging. If a lesion is suspected to be malignant, the specific type of lesion is determined through histopathological analysis of a biopsy. 
+Skin lesions are typically first diagnosed using clinical methods, either through single image expert consensus or serial imaging of dermoscopic images. If a lesion is suspected to be malignant, or its nature cannot be established, the specific type of lesion is determined by analyzing the cells of a biopsy under a microscope.
 
-According to a study published in April of 2021 in the Dermatology Research and Practice journal, 99.06% of the lesions clinically diagnosed as benign were actually benign, while 30.38% of the lesions clinically diagnosed as malignant were actually malignant(https://www.hindawi.com/journals/drp/2021/6618990). This means that less than 1% of the lesions diagnosed as benign in the study were actually malignant, and close to 70% of the lesions diagnosed as malignant in the study were actually benign. So while medical professionals are very precise when it comes to correctly diagnosing benign lesions, they are quite imprecise when it comes to correctly diagnosing malignant lesions. This makes sense given that medical professionals do not want to misdiagnose a malignant lesion as benign, but ultimately this imprecision makes clinical diagnosis somewhat inefficient. A study published in the Journal of Clinical Oncology in June of 2018, estimated that biopsies of benign tumors cost between $624 million and $1.7 billion(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
+According to a study published in April of 2021 in the Dermatology Research and Practice journal, 99.06% of the lesions clinically diagnosed as benign were actually benign, while 30.38% of the lesions clinically diagnosed as malignant were actually malignant(https://www.hindawi.com/journals/drp/2021/6618990). So while medical professionals are very precise when it comes to correctly diagnosing benign lesions, they are quite imprecise when it comes to correctly diagnosing malignant lesions. This makes sense given that medical professionals do not want to misdiagnose a malignant lesion as benign, but ultimately this imprecision makes clinical diagnosis somewhat inefficient. A study published in the Journal of Clinical Oncology in June of 2018, estimated that biopsies of benign tumors cost between $624 million and $1.7 billion over the course of the year(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
+
+Given the performance of medical professionals when it comes to clinically diagnosing skin lesions, my model will be most beneficial in confirming or rejecting clinical diagnoses of malignant lesions. Meaning, if a medical profession diagnoses a lesion to be malignant, my model could be used to either confirm the lesion is malignant, or identify said lesion as being benign, and therefore misdiagnosed.
 
 
 
 ## Data Understanding
 
 My dataset consists of 7,179 dermoscopic images from the Internation Skin Imaging Collaboration(ISIC) archive (https://www.isic-archive.com/). All patients were 10-90 years old and the images were taken in the course of clinical care.
+
+The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality in regard to the data. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 980 images of benign lesions for testing. I downloaded 1500 dermoscopic images of malignant lesions for training and validation, and 600 for testing. I downloaded 1500 dermoscopic images of unknown for training and validation, and 600 for testing. The class balance in my training set is 44% images of benign lesions, 28% images of malignant lesions, and 28% images of unknown lesions.
 
 The following file structure provides the ground truth labeling needed to train the models. If you wish to run my code, you will need to download images from the ISIC archive into the same directory format:
 ```
@@ -33,7 +37,7 @@ The following file structure provides the ground truth labeling needed to train 
          └──unknown
 ```
 
-The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality in regard to the data. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 600 images of benign lesions for testing. I downloaded 1500 images of malignant lesions for training and validation, and 600 for testing. For unkown lesions, I downloaded 1500 images for training and validation, and 600 for testing. The class balance in my training set is 44% images of benign lesions, 28% images of malignant lesions, and 28% images of unknown lesions.
+The following bar chart represent the class balance of the training set:
 
 <p align="center">
   <img src='images/skin_lesion_class_balance.png' width=450 height=350 />
@@ -92,8 +96,6 @@ The model's overall accuracy on the holdout set was just 75.31%, but in terms of
 Out of 943 lesions the model predicted were benign, it misdiagnosed just 3 malignant lesions and 10 unknown lesions, meaning its precision when predicting a lesion to be benign is 98.62%, which is less than 1% lower than a medical professional’s precision when clinically diagnosing a lesion to be benign. And out of 176 lesions the model predicted to be malignant, it misdiagnosed just 26 unknown lesions and 0 benign lesions, meaning its precision when predicting a lesion to be malignant is 85.23%, which is 55% higher than a medical professional’s precision when clinically diagnosing a lesion to be malignant.
 
 Given the model’s precision when predicting both benign and malignant lesions, the model could successfully be used to identify benign lesions that a medical professional has misdiagnosed as malignant, and therefore reduce the number of biopsies taken of benign lesions.
-
-
 
 
 
