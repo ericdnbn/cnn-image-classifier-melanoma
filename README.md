@@ -93,7 +93,7 @@ I trained my final model for 25 epochs with a batch size of 128 images.
 
 The model's overall accuracy on the holdout set was just 75.31%, but in terms of my key metric, precision, it performed quite well. 
 
-Out of 943 lesions the model predicted were benign, it misdiagnosed just 3 malignant lesions and 10 unknown lesions, meaning its precision when predicting a lesion to be benign is 98.62%, which is less than 1% lower than a medical professional’s precision when clinically diagnosing a lesion to be benign. And out of 176 lesions the model predicted to be malignant, it misdiagnosed just 26 unknown lesions and 0 benign lesions, meaning its precision when predicting a lesion to be malignant is 85.23%, which is 55% higher than a medical professional’s precision when clinically diagnosing a lesion to be malignant.
+Out of 943 lesions the model predicted were benign, it misdiagnosed just 3 malignant lesions and 10 unknown lesions, meaning its precision when predicting a lesion to be benign is 98.62%, which is less than 1% lower than a medical professional’s precision when clinically diagnosing a lesion to be benign. Out of 176 lesions the model predicted to be malignant, it misdiagnosed just 26 unknown lesions and 0 benign lesions. This means that the model’s precision when predicting a lesion to be malignant is 85.23%, which is 55% higher than a medical professional’s precision when clinically diagnosing a lesion to be malignant. 
 
 Given the model’s precision when predicting both benign and malignant lesions, the model could successfully be used to identify benign lesions that a medical professional has misdiagnosed as malignant, and therefore reduce the number of biopsies taken of benign lesions.
 
@@ -105,11 +105,11 @@ Given the model’s precision when predicting both benign and malignant lesions,
 
 - I recommend that this model be used as part of the clinical diagnosis of skin lesions.
 
-- If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professionals are more precise             diagnosing       benign lesions than the model.
+- If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professional's precision when it comes to diagnosing       benign lesions is over 99%.
 
-- If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that that the clinical diagnosis be rejected the clinical as   the model is just 1% less precise than medical professionals when it comes to predicting benign lesions, and while 70% of lesions medical professionals diagnose   as malignant are benign, the model does not misdiagnose any malignant lesions as being benign.
+- If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is       just under 1% less precise than medical professionals when it comes to predicting benign lesions. 
 
-- I recommend that if a lesion is clinically diagnosed as malignant and the model predicts it to be malignant or unknown, confirm the clinical diagnosis.
+- If a lesion is clinically diagnosed as malignant and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be confirmed, as     the model is 55% more precise than medical professionals when it comes to predicting malignant lesions, and does not misdiagnose any malignant lesions as being     benign, while 70% of lesions that medical professionals diagnose as malignant are actually benign, this is a significant improvement.
 
 - Finally, I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
 
@@ -117,7 +117,7 @@ Given the model’s precision when predicting both benign and malignant lesions,
 
 ### Next Steps
 
-- Get more dermoscopic images of those skin conditions in the archive that are underrepresented 
+- Get more dermoscopic images of those skin specific types of skin lesions that are underrepresented in the archive.
 
 - Train a multiclass classifier that predicts specific types of lesions, such as melanoma, basal cell carcinoma, squamous cell caricnoma, etc.
 
