@@ -81,13 +81,19 @@ Collectively, I iterated through ten models, adjusting these features parameters
 
 ## Final Evaluation
 
-The final model...
+I trained my final model for 25 epochs with a batch size of 128 images. 
 
 <p align="center">
   <img src='images/confusion_matrix_fm.png' width=563 height=375 />
 </p>
 
-On unseen testing data...
+The model's overall accuracy on the holdout set was just 75.31%, but in terms of my key metric, precision, it performed quite well. 
+
+Out of 943 lesions the model predicted were benign, it misdiagnosed just 3 malignant lesions and 10 unknown lesions, meaning its precision when predicting a lesion to be benign is 98.62%, which is less than 1% lower than a medical professional’s precision when clinically diagnosing a lesion to be benign. And out of 176 lesions the model predicted to be malignant, it misdiagnosed just 26 unknown lesions and 0 benign lesions, meaning its precision when predicting a lesion to be malignant is 85.23%, which is 55% higher than a medical professional’s precision when clinically diagnosing a lesion to be malignant.
+
+Given the model’s precision when predicting both benign and malignant lesions, the model could successfully be used to identify benign lesions that a medical professional has misdiagnosed as malignant, and therefore reduce the number of biopsies taken of benign lesions.
+
+
 
 
 
@@ -110,8 +116,6 @@ On unseen testing data...
 ### Next Steps
 
 - Get more dermoscopic images of those skin conditions in the archive that are underrepresented 
-
-- Train a binary classifier that predicts only benign and malignant lesions
 
 - Train a multiclass classifier that predicts specific types of lesions, such as melanoma, basal cell carcinoma, squamous cell caricnoma, etc.
 
