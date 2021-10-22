@@ -84,7 +84,7 @@ Collectively, I iterated through ten models, adjusting these features parameters
 The final model...
 
 <p align="center">
-  <img src='images/confusion_matrix_fm.png' width=560 height=375 />
+  <img src='images/confusion_matrix_fm.png' width=563 height=375 />
 </p>
 
 On unseen testing data...
