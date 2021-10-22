@@ -43,7 +43,7 @@ The following file structure provides the ground truth labeling needed to train 
 
 
 
-## Modeling with neural networks
+## Modeling With Neural Networks
 
 My first simple model consists of a basic fully connected dense neural network with two hidden layers, plus an output layer. 
 This model serves as a proof of concept and provides baseline metrics.
@@ -81,7 +81,7 @@ Collectively, I iterated through ten models, adjusting these features parameters
 
 
 
-## Final Evaluation
+## Final Model Evaluation
 
 I trained my final model for 25 epochs with a batch size of 128 images. 
 
