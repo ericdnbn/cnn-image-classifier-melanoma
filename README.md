@@ -95,13 +95,16 @@ On unseen testing data...
 
 ### Recommendations
 
-- I recommend that this model be used by medical professionals as part of the clinical diagnosis of skin lesions.
+- I recommend that this model be used as part of the clinical diagnosis of skin lesions.
 
-- I recommend that if a medical professional diagnoses a lesion as benign, I recommend that this model not be used, as their precision in making that diagnosis is   more than 99%.
+- If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professionals are more precise             diagnosing       benign lesions than the model.
 
-- I recommend that if a medical professional diagnoses a lesion as malignant, I recommend that this model be used to confirm or reject that clinical diagnosis, as   their precision in making that diagnosis is ~30%
+- If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that that the clinical diagnosis be rejected the clinical as   the model is just 1% less precise than medical professionals when it comes to predicting benign lesions, and while 70% of lesions medical professionals diagnose   as malignant are benign, the model does not misdiagnose any malignant lesions as being benign.
 
-- I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
+- I recommend that if a lesion is clinically diagnosed as malignant and the model predicts it to be malignant or unknown, confirm the clinical diagnosis.
+
+- Finally, I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
+
 
 
 ### Next Steps
