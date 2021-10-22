@@ -83,7 +83,9 @@ Collectively, I iterated through ten models, adjusting these features parameters
 
 The final model...
 
-![final confusion matrix]()
+<p align="center">
+  <img src='images/confusion_matrix_final_model.png' width=600 height=375 />
+</p>
 
 On unseen testing data...
 
@@ -121,11 +123,14 @@ See the full analysis in the [Jupyter Notebook](./.ipynb) or review this [presen
 ### Structure of Repository:
 
 ```
-├── callback_checkpoints
-├── dermoscopic_images (dataset)
-├── functions.py
 ├── images (for readme, presentation)
+├── code
+├── net2vis_images
+├── Capstone_presentation_draft.pdf
+├── README.md
+├── data
 ├── models (saved .h5 files of trained models)
-├── skin_lesion_image_classifier_notebook.ipynb
-└── README.md
+├── callback_checkpoints
+├── LICENSE.md
+└── CONTRIBUTING.md
 ```
