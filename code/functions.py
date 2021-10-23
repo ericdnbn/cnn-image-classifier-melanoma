@@ -148,7 +148,7 @@ def visualize_nn_test(history, model, train_generator, val_generator, test_gener
 		print('')
 		print('Test Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 	else:
@@ -164,7 +164,7 @@ def visualize_nn_test(history, model, train_generator, val_generator, test_gener
 		print('')
 		print('Test Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
     
     
 
@@ -234,7 +234,7 @@ def visualize_nn(history, model, train_generator, val_generator, multi=None, lab
 		print('')
 		print('Validation Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 	else:
@@ -250,7 +250,7 @@ def visualize_nn(history, model, train_generator, val_generator, multi=None, lab
 		print('')
 		print('Validation Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 
@@ -487,7 +487,7 @@ def visualize_cnn_test(history, model, train_generator, val_generator, test_gene
 		print('')
 		print('Test Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 	else:
@@ -503,7 +503,7 @@ def visualize_cnn_test(history, model, train_generator, val_generator, test_gene
 		print('')
 		print('Test Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 def visualize_cnn(history, model, train_generator, val_generator, multi=None, labels=None):
@@ -572,7 +572,7 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 		print('')
 		print('Validation Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 	else:
@@ -588,7 +588,7 @@ def visualize_cnn(history, model, train_generator, val_generator, multi=None, la
 		print('')
 		print('Validation Confusion Matrix')
 		print('')
-		cmd.plot();
+		cmd.plot(values_format='d');
 
 
 def cnn_model(cnn_filters,
