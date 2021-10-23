@@ -86,7 +86,7 @@ Collectively, I iterated through ten models, adjusting these features parameters
 I trained my final model for 25 epochs with a batch size of 128 images. 
 
 <p align="center">
-  <img src='images/confusion_matrix_fm.png' width=563 height=375 />
+  <img src='images/confusion_matrix_final_model.png' width=563 height=375 />
 </p>
 
 The model's overall accuracy on the holdout set was just 75.31%, but in terms of my key metric, precision, it performed quite well. 
