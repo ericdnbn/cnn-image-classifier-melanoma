@@ -11,7 +11,7 @@
 Skin cancer is the most common form of cancer in the United States and worldwide. In the United States, more people are diagnosed with skin cancer each year than all other cancers combined.
 
 <p align="center">
-  <img src='images/skin_cancer_infographic.png' width=550 height=150 />
+  <img src='images/skin_cancer_infographic.png' width=500 height=200 />
 </p>
 
 Skin lesions are typically first diagnosed using clinical methods, either through single image expert consensus or serial imaging of dermoscopic images. At this stage of the diagnostic process, medical professionals are visually examining the size, color, shape, uniformity, and location of skin lesions. 
