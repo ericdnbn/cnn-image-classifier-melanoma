@@ -100,7 +100,7 @@ Below is a diagram of my final model, showing the architecture of the VGG16 mode
 </p>
 
 <p align="center">
-  <img src='images/net2vis_layers.png' width=700 height=300 />
+  <img src='images/net2vis_layers.png' width=700 height=275 />
 </p>
 
 ## Final Model Evaluation
