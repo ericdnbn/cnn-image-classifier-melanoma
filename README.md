@@ -17,7 +17,7 @@ Skin cancer is the most common form of cancer in the United States and worldwide
 Skin lesions are typically first diagnosed using clinical methods, either through single image expert consensus or serial imaging of dermoscopic images. At this stage of the diagnostic process, medical professionals are visually examining the size, color, shape, uniformity, and location of skin lesions. 
 
 <p align="center">
-  <img src='images/class_examples.png' width=550 height=150 />
+  <img src='images/single_image_consensus_example.png' width=550 height=150 />
 </p>
 
 If a diagnosis is uncertain, more clinical tests may be performed. These include blood tests, allergy tests, and skin swabs. At this point, if a lesion is suspected to be malignant, or the diagnosis is still uncertain, the specific type of lesion is determined by analyzing a biopsy under a microscope.
@@ -37,6 +37,10 @@ Given the performance of medical professionals when it comes to clinically diagn
 ## Data Understanding
 
 My dataset consists of 7,179 dermoscopic images from the Internation Skin Imaging Collaboration(ISIC) archive (https://www.isic-archive.com/). All patients were 10-90 years old and the images were taken in the course of clinical care.
+
+<p align="center">
+  <img src='images/class_examples.png' width=550 height=150 />
+</p>
 
 The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality in regard to the data. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 980 images of benign lesions for testing. I downloaded 1500 dermoscopic images of malignant lesions for training and validation, and 600 for testing. I downloaded 1500 dermoscopic images of unknown for training and validation, and 600 for testing. The class balance in my training set is 44% images of benign lesions, 28% images of malignant lesions, and 28% images of unknown lesions.
 
