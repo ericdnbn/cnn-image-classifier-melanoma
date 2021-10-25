@@ -79,15 +79,14 @@ To improve on my first simple model, I began iterating on convolutional neural n
  - Using L2 regularization
  - Trying different kernel sizes
 
-Using convolutional neural networks, the validation accuracy of the models increased along with precision as it related to predicting the benign class. However, the validation accuracy reached a ceiling around 68% and the model's precision as it related to predicting the malignant class remained below 50%.
+Using convolutional neural networks, the validation accuracy of the models increased along with precision in predicting the benign class. However, the validation accuracy reached a ceiling around 68% and the model's precision in predicting the malignant class remained below 50%.
 
-In an effor to improve model performance, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
+In an effort to improve model performance, and particularly precision when predicting the benign and malignant classes, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
  - Increasing the number of dense layers 
  - Increasing the number of nodes in the first hidden layer with each additional layer
 
  
-Collectively, I iterated through more than ten models, going from a fully connected dense neural network to convolutional neural networks with custom architecture, and finally, to convolutional neural networks with the pre-trained VGG16 model as a base. My final model has the following architecture:
-
+Collectively, I iterated through more than ten models, going from a fully connected dense neural network, to convolutional neural networks with custom architecture, and finally to convolutional neural networks with the pre-trained VGG16 model as a base. My final model has the following architecture:
 
 <p align="center">
   <img src='images/final_model_summary.png' width=560 height=600 />
