@@ -24,7 +24,7 @@ If a diagnosis is uncertain, more clinical tests may be performed. These include
 
 According to a study published in April of 2021 in the Dermatology Research and Practice journal, 99.06% of the lesions clinically diagnosed as benign were actually benign, while 30.38% of the lesions clinically diagnosed as malignant were actually malignant(https://www.hindawi.com/journals/drp/2021/6618990). So while medical professionals are very precise when it comes to correctly diagnosing benign lesions, they are quite imprecise when it comes to correctly diagnosing malignant lesions. This makes sense given that medical professionals do not want to misdiagnose a malignant lesion as benign, but ultimately this imprecision makes clinical diagnosis somewhat inefficient. A study published in the Journal of Clinical Oncology in June of 2018, estimated that biopsies of benign tumors cost between $624 million and $1.7 billion over the course of the year(https://ascopubs.org/doi/abs/10.1200/JCO.2018.36.15_suppl.e18903).
 
-Given the performance of medical professionals when it comes to clinically diagnosing skin lesions, my model will be most beneficial in confirming or rejecting clinical diagnoses of malignant lesions. Meaning, if a medical profession diagnoses a lesion to be malignant, my model could be used to either confirm the lesion is malignant, or identify said lesion as being benign, and therefore misdiagnosed.
+Given the performance of medical professionals when it comes to clinically diagnosing skin lesions, an image classification model would be beneficial in confirming or rejecting a clinical diagnosis of a malignant skin lesion.
 
 
 
