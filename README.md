@@ -17,7 +17,7 @@ Skin cancer is the most common form of cancer in the United States and worldwide
 Skin lesions are typically first diagnosed using clinical methods, either through single image expert consensus or serial imaging of dermoscopic images. At this stage of the diagnostic process, medical professionals are visually examining the size, color, shape, uniformity, and location of skin lesions. 
 
 <p align="center">
-  <img src='images/single_image_consensus_example.png' width=550 height=150 />
+  <img src='images/single_image_consensus_example.png' width=550 height=250 />
 </p>
 
 If a diagnosis is uncertain, more clinical tests may be performed. These include blood tests, allergy tests, and skin swabs. At this point, if a lesion is suspected to be malignant, or the diagnosis is still uncertain, the specific type of lesion is determined by analyzing a biopsy under a microscope.
