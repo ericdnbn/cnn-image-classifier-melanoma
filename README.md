@@ -96,11 +96,11 @@ Collectively, I iterated through more than ten models, going from a fully connec
 Below is a diagram of my final model, showing the architecture of the VGG16 model, as well as the fully connected dense layers:
 
 <p align="center">
-  <img src='images/VGG16_visual.png' width=560 height=600 />
+  <img src='images/VGG16_visual.png' width=700 height=400 />
 </p>
 
 <p align="center">
-  <img src='images/net2vis_layers.png' width=560 height=600 />
+  <img src='images/net2vis_layers.png' width=700 height=400 />
 </p>
 
 ## Final Model Evaluation
