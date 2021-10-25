@@ -82,7 +82,7 @@ Collectively, I iterated through more than ten models, going from a fully connec
 
 
 <p align="center">
-  <img src='images/.png' width=560 height=400 />
+  <img src='images/final_model_summary.png' width=560 height=400 />
 </p>
 
 
