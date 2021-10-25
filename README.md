@@ -78,9 +78,12 @@ Once the performance of the convolutional neural networks I trained using custom
  - Increasing the number of nodes in the first hidden layer with each additional layer
 
  
-Collectively, I iterated through ten models, adjusting these features parameters among others. My final model has the following architecture:
+Collectively, I iterated through more than ten models, going from a fully connected dense neural network to convolutional neural networks with custom architecture, and finally, to convolutional neural networks with the pre-trained VGG16 model as a base. My final model has the following architecture:
 
-![final model summary]()
+
+<p align="center">
+  <img src='images/.png' width=560 height=400 />
+</p>
 
 
 
