@@ -68,7 +68,7 @@ The following is the confusion matrix it produced:
   <img src='images/confusion_matrix_fsm.png' width=600 height=375 />
 </p>
 
-The first simple model returned a validation accuracy of 44.44%, as it predicted every image to be part of the benign lesion class. Given that I trained it for just five epochs as a proof of concept, these results were as much as I expected.
+The first simple model returned a validation accuracy of 44.44%, as it predicted every image to be part of the benign class. Given that I trained it for just five epochs as a proof of concept, these results were as much as I expected.
 
 
 To improve on my first simple model, I began iterating on convolutional neural networks. The following are various adjustments made over these iterations to improve model performance:
@@ -79,15 +79,9 @@ To improve on my first simple model, I began iterating on convolutional neural n
  - Using L2 regularization
  - Trying different kernel sizes
 
-The following is the confusion matrix of my best performing CNN model:
+Using convolutional neural networks, the validation accuracy of the models increased along with precision as it related to predicting the benign class. However, the validation accuracy reached a ceiling around 68% and the model's precision as it related to predicting the malignant class remained below 50%.
 
-<p align="center">
-  <img src='images/confusion_matrix_best_cnn.png' width=560 height=400 />
-</p>
-
-*How iterations improved model*
-
-Once the performance of the convolutional neural networks I trained using custom architecture plateaued, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
+In an effor to improve model performance, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
  - Increasing the number of dense layers 
  - Increasing the number of nodes in the first hidden layer with each additional layer
 
@@ -99,7 +93,15 @@ Collectively, I iterated through more than ten models, going from a fully connec
   <img src='images/final_model_summary.png' width=560 height=600 />
 </p>
 
+Below is a diagram of my final model, showing the architecture of the VGG16 model, as well as the fully connected dense layers:
 
+<p align="center">
+  <img src='images/VGG16_visual.png' width=560 height=600 />
+</p>
+
+<p align="center">
+  <img src='images/net2vis_layers.png' width=560 height=600 />
+</p>
 
 ## Final Model Evaluation
 
