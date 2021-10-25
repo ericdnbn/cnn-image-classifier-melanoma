@@ -54,6 +54,9 @@ The following is the confusion matrix it produced:
   <img src='images/confusion_matrix_fsm.png' width=600 height=375 />
 </p>
 
+The first simple model returned a validation accuracy of 44.44%, as it predicted every image to be part of the benign lesion class. Given that I trained it for just five epochs as a proof of concept, these results were as much as I expected.
+
+
 To improve on my first simple model, I began iterating on convolutional neural networks. The following are various adjustments made over these iterations to improve model performance:
  - Adding more dense layers
  - Adding convolutional layers
@@ -70,7 +73,7 @@ The following is the confusion matrix of my best performing CNN model:
 
 *How iterations improved model*
 
-Once the performance of the convolutional neural networks I trained using custom architecture plateaued, I began exploring transfer learning. For the first iteration, I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
+Once the performance of the convolutional neural networks I trained using custom architecture plateaued, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
  - Increasing the number of dense layers 
  - Increasing the number of nodes in the first hidden layer with each additional layer
 
