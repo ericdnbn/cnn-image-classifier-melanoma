@@ -1,4 +1,4 @@
-# Identifying Skin Lesions In Dermoscopic Images With Neural Networks
+# Classifying Skin Lesions In Dermoscopic Images With Neural Networks
 
 ### Author: Eric Denbin
 
