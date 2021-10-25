@@ -102,15 +102,15 @@ Below is a diagram of my final model, showing the architecture of the VGG16 mode
   <img src='images/net2vis_layers.png' width=700 height=275 />
 </p>
 
+
+
 ## Final Model Evaluation
 
-I trained my final model for 25 epochs with a batch size of 128 images. 
+I trained my final model for 25 epochs with a batch size of 128 images. The model's overall accuracy on the holdout set was just 75.31%, but in terms of my key metric, precision, specifically as it relates to predicting the benign and malignant classes, it performed quite well. The following shows the confusion matrix results after evaluating the final model on the the holdout dataset:
 
 <p align="center">
   <img src='images/confusion_matrix_final_model.png' width=563 height=375 />
 </p>
-
-The model's overall accuracy on the holdout set was just 75.31%, but in terms of my key metric, precision, it performed quite well. 
 
 Out of 946 lesions the model predicted were benign, it misdiagnosed just 3 malignant lesions and 10 unknown lesions, meaning its precision when predicting a lesion to be benign is 98.63%, which is less than 1% lower than a medical professional’s precision when clinically diagnosing a lesion to be benign. Out of 176 lesions the model predicted to be malignant, it misdiagnosed just 26 unknown lesions and 0 benign lesions. This means that the model’s precision when predicting a lesion to be malignant is 85.23%, which is 55% higher than a medical professional’s precision when clinically diagnosing a lesion to be malignant. 
 
