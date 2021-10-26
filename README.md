@@ -155,14 +155,13 @@ See the full analysis in the [Jupyter Notebook](./.ipynb) or review this [presen
 ### Structure of Repository:
 
 ```
-├── images (for readme, presentation)
+├── .ipynb_checkpoints
 ├── code
-├── net2vis_images
-├── Capstone_presentation_draft.pdf
-├── README.md
-├── data
+├── images
 ├── models (saved .h5 files of trained models)
-├── callback_checkpoints
+├── .gitignore
+├── CONTRIBUTING.md
 ├── LICENSE.md
-└── CONTRIBUTING.md
+├── README.md
+└── skin_lesion_image_classifier_final_notebook.ipynb
 ```
