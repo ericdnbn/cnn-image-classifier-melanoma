@@ -8,7 +8,7 @@
 
 ## Business Understanding
 
-Skin cancer is the most common form of cancer in the United States and worldwide. In the United States, more people are diagnosed with skin cancer each year than all other cancers combined.
+Skin cancer is the most common form of cancer in the United States and worldwide. In the United States, more people are diagnosed with skin cancer each year than all other forms of cancer combined.
 
 <p align="center">
   <img src='images/skin_cancer_infographic.png' width=500 height=200 />
@@ -20,13 +20,13 @@ Skin lesions are typically first diagnosed using clinical methods, either throug
   <img src='images/single_image_consensus_example.png' width=550 height=250 />
 </p>
 
-If a diagnosis is uncertain, more clinical tests may be performed. These include blood tests, allergy tests, and skin swabs. At this point, if a lesion is suspected to be malignant, or the diagnosis is still uncertain, the specific type of lesion is determined by analyzing a biopsy under a microscope.
+If a diagnosis is uncertain, more clinical tests may be performed. These include blood tests, allergy tests, and skin swabs, among others. At this point, if a lesion is suspicious for malignant, or the diagnosis is still uncertain, the specific type of lesion is determined by analyzing a biopsy under a microscope.
 
 <p align="center">
   <img src='images/biopsy.jpeg' width=400 height=200 />
 </p>
 
-Now, according to a study published in April of 2021 in the Dermatology Research and Practice journal, 99.06% of the lesions that were clinically diagnosed as benign were actually benign, while 82.85% of benign lesions were identified. So while medical professionals are very precise when it comes to correctly diagnosing benign lesions using clinical methods, they often misdiagnose a significant portion of benign lesions as being suspicious of malignancy. This makes sense given that medical professionals do not want to misdiagnose a malignant lesion as benign, but ultimately this imprecision makes clinical diagnosis somewhat inefficient. A study published in the Journal of Clinical Oncology in June of 2018, estimated that biopsies of benign lesions cost between \$624 million and $1.7 billion over the course of the year.
+Now, according to a study published in April of 2021 in the Dermatology Research and Practice journal, 99.06% of the lesions that were clinically diagnosed as benign were actually benign, while 82.85% of benign lesions were identified. So while medical professionals are very precise when it comes to correctly diagnosing benign lesions using clinical methods, they often misdiagnose a significant portion of benign lesions as being suspicious for malignancy. This makes sense given that medical professionals do not want to misdiagnose a malignant lesion as being benign, but ultimately, this imprecision makes clinical diagnosis somewhat inefficient. A study published in the Journal of Clinical Oncology in June of 2018, estimated that biopsies of benign lesions cost between \$624 million and $1.7 billion over the course of the year.
 
 Given the performance of medical professionals when it comes to clinically diagnosing skin lesions, a model will be most beneficial in confirming or rejecting a clinical diagnosis that a lesion is suspicious for malignancy. In practice, this means that if a medical professional diagnoses a lesion as being suspicious for malignancy, a model could be used to either confirm the diagnosis, or identify said lesion as being benign, and therefore misdiagnosed, meaning a biopsy does not need to be taken.
 
