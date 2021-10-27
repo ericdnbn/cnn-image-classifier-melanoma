@@ -122,6 +122,28 @@ Given the model’s precision when predicting both benign and malignant lesions,
 
 
 
+## Exploring The Blackbox
+
+In an effort to understand what features of each image the model was using to make its predictions, I used the lime library to visualize the predictive boundary, as well as the pros and cons mask, for several correctly classified and misclassified images. 
+
+The following are examples of a correctly classified image from each class:
+
+<p align="center">
+  <img src="images/correctly_classified_lime.png" width=500 height=200/>
+</p>
+
+**Analysis:** 
+
+The following are examples of a misclassified image from each class:
+
+<p align="center">
+  <img src="images/misclassified_lime.png" width=500 height=200/>
+</p>
+
+**Analysis:** 
+
+
+
 ## Conclusions
 
 ### Recommendations
@@ -130,7 +152,7 @@ Given the model’s precision when predicting both benign and malignant lesions,
 
 - If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professional's precision when it comes to diagnosing       benign lesions is over 99%.
 
-- If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is       just under 1% less precise than medical professionals when it comes to predicting benign lesions. 
+- If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is       just under a half of a percent less precise than medical professionals when it comes to predicting benign lesions. 
 
 - If a lesion is clinically diagnosed as malignant, and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be confirmed, as   the model only misdiagnoses benign lesions as either malignant or unknown 4.80% of the time.
 
