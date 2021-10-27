@@ -132,7 +132,7 @@ Given the model’s precision when predicting both benign and malignant lesions,
 
 - If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is       just under 1% less precise than medical professionals when it comes to predicting benign lesions. 
 
-- If a lesion is clinically diagnosed as malignant and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be confirmed, as     the model is 55% more precise than medical professionals when it comes to predicting malignant lesions, and does not misdiagnose any malignant lesions as being     benign, while 70% of lesions that medical professionals diagnose as malignant are actually benign, this is a significant improvement.
+- If a lesion is clinically diagnosed as malignant, and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be confirmed, as   the model only misdiagnoses benign lesions as either malignant or unknown 4.80% of the time.
 
 - Finally, I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
 
