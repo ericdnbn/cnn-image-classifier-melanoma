@@ -116,9 +116,16 @@ I trained my final model for 25 epochs with a batch size of 128 images. The mode
   <img src='images/confusion_matrix_final_model.png' width=563 height=375 />
 </p>
 
-Out of 946 lesions the model predicted were benign, it misdiagnosed just 3 malignant lesions and 10 unknown lesions, meaning its precision when predicting a lesion to be benign is 98.63%, which is less than 1% lower than a medical professional’s precision when clinically diagnosing a lesion to be benign. Out of 176 lesions the model predicted to be malignant, it misdiagnosed just 26 unknown lesions and 0 benign lesions. This means that the model’s precision when predicting a lesion to be malignant is 85.23%, which is 55% higher than a medical professional’s precision when clinically diagnosing a lesion to be malignant. 
+The accuracy of my final model on the test set was just 75.31%, but in terms of my key metric, F1 score, it performed quite well.
 
-Given the model’s precision when predicting both benign and malignant lesions, the model could successfully be used to identify benign lesions that a medical professional has misdiagnosed as malignant, and therefore reduce the number of biopsies taken of benign lesions.
+Out of 946 lesions the model predicted to be benign, it correctly diagnosed 933, and misdiagnosed just 3 malignant lesions and 10 unknown lesions. This means that its precision when predicting lesions to be benign is 98.63%, which is less than a half of a percent lower than the precision of medical professionals clinically diagnosing lesions to be benign. 
+
+Out of 980 total benign lesions, the model was able to identify 933. This means that its recall when predicting  lesions to be benign is 95.2%, which is about 13% better than the recall of medical professionals clinically diagnosing lesions to be benign. Using these values, the F1 score comes out to 96.88. 
+
+Now, it is important to note that the model does have trouble distinguishing between malignant and unknown lesions, as demonstrated by the 447 malignant lesions the model predicted to be unknown. However, as it relates to my business problem, this is irrelevant, because a biopsy would be taken regardless of whether a lesion is diagnosed as malignant or unknown. What is important is that there are no benign lesions misdiagnosed as malignant, and only 4.8% of all benign lesions misdiagnosed as unknown.
+
+Given the model’s precision and recall as it relates to predicting benign lesions, it could successfully be used to identify misdiagnosed benign lesions, and therefore reduce the number of biopsies taken of benign lesions.
+
 
 
 
@@ -150,8 +157,8 @@ Examples of a misclassified image from each class with the pros and cons mask la
 
 - If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professional's precision when it comes to diagnosing       benign lesions is over 99%.
 
-- If a lesion is clinically diagnosed as malignant and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is       just under a half of a percent less precise than medical professionals when it comes to predicting benign lesions. 
-
+- If a lesion is clinically diagnosed as malignant, and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is not   even half of a percent less precise than medical professionals in clinically diagnosing a lesion to be benign. 
+ 
 - If a lesion is clinically diagnosed as malignant, and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be confirmed, as   the model only misdiagnoses benign lesions as either malignant or unknown 4.80% of the time.
 
 - Finally, I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
@@ -168,7 +175,7 @@ Examples of a misclassified image from each class with the pros and cons mask la
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./.ipynb) or review this [presentation](./.pdf)
+See the full analysis in the [Jupyter Notebook](./skin_lesion_image_classifier.ipynb) or review this [presentation](./skin_lesion_image_classifier_presentation.pdf)
 
 
 
