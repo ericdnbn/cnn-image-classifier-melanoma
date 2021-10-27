@@ -124,23 +124,21 @@ Given the model’s precision when predicting both benign and malignant lesions,
 
 ## Exploring The Blackbox
 
-In an effort to understand what features of each image the model was using to make its predictions, I used the lime library to visualize the predictive boundary, as well as the pros and cons mask, for several correctly classified and misclassified images. 
+In an effort to understand what features of each image the model was using to make its predictions, I used the lime library to visualize the pros and cons mask, as well as the predictive boundary, for several correctly classified and misclassified images. 
 
-The following are examples of a correctly classified image from each class:
+Examples of a correctly classified image from each class with the pros and cons mask laid over the top:
 
 <p align="center">
   <img src="images/correctly_classified_lime.png" width=500 height=200/>
 </p>
 
-**Analysis:** 
-
-The following are examples of a misclassified image from each class:
+Examples of a misclassified image from each class with the pros and cons mask laid over the top:
 
 <p align="center">
   <img src="images/misclassified_lime.png" width=500 height=200/>
 </p>
 
-**Analysis:** 
+**Analysis:** It appears from this brief exploration that the model is focusing on the lesion when it correctly classifies an image, and is focusing on the skin surrounding the lesion when it misclassifies an image. However, these are three particularly good examples of both correctly classified and misclassified images, and are not representative of how the model made all of its correct and incorrect predictions. There were some correctly classified images where the model used the surrounding skin to make its prediction, and some misclassified images where the model was focusing on the lesion. I would need to do further exploration to determine exactly how and why the model predicts each image the way it does.
 
 
 
