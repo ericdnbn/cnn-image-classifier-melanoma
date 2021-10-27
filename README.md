@@ -190,5 +190,6 @@ See the full analysis in the [Jupyter Notebook](./skin_lesion_image_classifier.i
 ├── CONTRIBUTING.md
 ├── LICENSE.md
 ├── README.md
-└── skin_lesion_image_classifier_final_notebook.ipynb
+├── skin_lesion_image_classifier.ipynb
+└── skin_lesion_image_classifier.pdf
 ```
