@@ -115,15 +115,15 @@ I trained the best model for 25 epochs with a batch size of 128 images. The foll
   <img src='images/confusion_matrix_final_model.png' width=563 height=375 />
 </p>
 
-The accuracy of the best model on the test set was just 75.31%, but in terms of my key metric, F1 score, it performed quite well.
+The accuracy of the best model on the test set was just 75.31%, but in terms of my key metric, F1 score as it relates to predicting the benign class, it performed quite well.
 
-Out of 946 lesions the model predicted to be benign, it correctly diagnosed 933, and misdiagnosed just 3 malignant lesions and 10 unknown lesions. This means that its precision when predicting lesions to be benign is 98.63%, which is less than a half of a percent lower than the precision of medical professionals clinically diagnosing lesions as being benign. 
+Out of 946 lesions the model predicted to be benign, 933 are benign, 3 are malignant, and 10 are unknown. This means that its precision when predicting lesions to be benign is 98.63%, which is less than a half of a percent lower than the precision of medical professionals clinically diagnosing lesions as being benign. 
 
 Out of 980 total benign lesions, the model was able to identify 933. This means that its recall when predicting lesions to be benign is 95.20%, which is about 13% better than the recall of medical professionals clinically diagnosing lesions as being benign. 
 
-Using these values for precision and recall, the F1 score as it relates to predicting the benign class comes out to 96.88.
+Using these values for precision and recall, the F1 score as it relates to predicting the benign class comes out to 96.88. 
 
-It is important to note that the model does have trouble distinguishing between malignant and unknown lesions, as demonstrated by the 447 malignant lesions the model predicted to be unknown. However, as it relates to the business problem, this is irrelevant, because a biopsy would be taken regardless of whether a lesion is diagnosed as being malignant or unknown. What is important is that there are no benign lesions misdiagnosed as malignant, and only 4.80% of all benign lesions are misdiagnosed as unknown.
+It is important to note that the model does have trouble distinguishing between malignant and unknown lesions, as demonstrated by the 447 malignant lesions the model predicted to be unknown. However, as it relates to the business problem, this is irrelevant, because a biopsy would be taken regardless of whether a lesion is predicted to be malignant or unknown. What is important is that there are no benign lesions predicted to be malignant, and only 4.80% of all benign lesions are predicted to be unknown.
 
 Given the model’s precision and recall as it relates to predicting the benign class, it could successfully be used to identify misdiagnosed benign lesions, and therefore reduce the number of biopsies taken of benign lesions.
 
