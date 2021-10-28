@@ -63,8 +63,7 @@ The following file structure provides the ground truth labeling needed to train 
 
 ## Modeling With Neural Networks
 
-The first simple model consists of a basic fully connected dense neural network with two hidden layers, plus an output layer. 
-This model serves as a proof of concept and provides baseline metrics.
+The first simple model consists of a fully connected dense neural network with two hidden layers, plus an output layer. This model serves as a proof of concept and provides baseline metrics.
 
 The following is the confusion matrix it produced:
 
@@ -83,14 +82,14 @@ To improve on the first simple model, I began iterating on convolutional neural 
  - Using L2 regularization
  - Trying different kernel sizes
 
-Using convolutional neural networks, the validation accuracy of the models increased along with precision and recall in predicting the benign class. However, the validation accuracy reached a ceiling around 68% and the model's precision and recall in predicting the malignant class was volatile.
+Using convolutional neural networks, the validation accuracy of the models increased along with precision and recall in predicting the benign class. However, the validation accuracy reached a ceiling around 68% and the model's precision and recall in predicting the benign class was volatile.
 
-In an effort to improve model performance, and particularly precision and recall when predicting the benign class, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from my best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
+In an effort to improve model performance, and particularly precision and recall when predicting the benign class, I began exploring transfer learning. I used the pre-trained VGG16 model with the 'imagenet' weights as a base, and the same architecture from the best convolutional neural network to construct the fully connected dense layers. The following are other adjustments I made as I continued iterating:
  - Increasing the number of dense layers 
  - Increasing the number of nodes in the first hidden layer with each additional layer
 
  
-Collectively, I iterated through more than ten models, going from a fully connected dense neural network, to convolutional neural networks with custom architecture, and finally, to convolutional neural networks with the pre-trained VGG16 model as a base, with custom architecture for the fully connected dense layers. My final model has the following architecture:
+Collectively, I iterated through more than ten models, going from a fully connected dense neural network, to convolutional neural networks with custom architecture, and finally, to convolutional neural networks with the pre-trained VGG16 model as a base, and custom architecture for the fully connected dense layers. My final model has the following architecture:
 
 <p align="center">
   <img src='images/final_model_summary.png' width=560 height=600 />
@@ -122,9 +121,9 @@ Out of 946 lesions the model predicted to be benign, it correctly diagnosed 933,
 
 Out of 980 total benign lesions, the model was able to identify 933. This means that its recall when predicting lesions to be benign is 95.20%, which is about 13% better than the recall of medical professionals clinically diagnosing lesions to be benign. Using these values, the F1 score comes out to 96.88. 
 
-It is important to note that the model does have trouble distinguishing between malignant and unknown lesions, as demonstrated by the 447 malignant lesions the model predicted to be unknown. However, as it relates to my business problem, this is irrelevant, because a biopsy would be taken regardless of whether a lesion is diagnosed as malignant or unknown. What is important is that there are no benign lesions misdiagnosed as malignant, and only 4.80% of all benign lesions are misdiagnosed as unknown.
+It is important to note that the model does have trouble distinguishing between malignant and unknown lesions, as demonstrated by the 447 malignant lesions the model predicted to be unknown. However, as it relates to the business problem, this is irrelevant, because a biopsy would be taken regardless of whether a lesion is diagnosed as malignant or unknown. What is important is that there are no benign lesions misdiagnosed as being suspicious for malignancy, and only 4.80% of all benign lesions are misdiagnosed as unknown.
 
-Given the best model’s precision and recall as it relates to predicting benign lesions, it could successfully be used to identify misdiagnosed benign lesions, and therefore reduce the number of biopsies taken of benign lesions.
+Given the model’s precision and recall as it relates to predicting the benign class, it could successfully be used to identify misdiagnosed benign lesions, and therefore reduce the number of biopsies taken of benign lesions.
 
 
 
@@ -144,7 +143,7 @@ Examples of a misclassified image from each class with the pros and cons mask la
   <img src="images/misclassified_lime.png" width=500 height=200/>
 </p>
 
-**Analysis:** It appears from this brief exploration that the best model is focusing on the lesion when it correctly classifies an image, and is focusing on the skin surrounding the lesion when it misclassifies an image. However, these are three particularly good examples of both correctly classified and misclassified images, and are not representative of how the model made all of its correct and incorrect predictions. There were some correctly classified images where the model used the surrounding skin to make its prediction, and some misclassified images where the model was focusing on the lesion. I would need to investigate further to determine exactly how and why the model predicts each image the way it does.
+**Analysis:** It appears from this brief exploration that the model is focusing on the lesion when it correctly classifies an image, and is focusing on the skin surrounding the lesion when it misclassifies an image. However, these are three particularly good examples of both correctly classified and misclassified images, and are not representative of how the model made all of its correct and incorrect predictions. There were some correctly classified images where the model used the surrounding skin to make its prediction, and some misclassified images where the model was focusing on the lesion. I would need to investigate further to determine exactly how and why the model predicts each image the way it does.
 
 
 
@@ -154,9 +153,9 @@ Examples of a misclassified image from each class with the pros and cons mask la
 
 - I recommend that this model be used as part of the clinical diagnosis of skin lesions.
 
-- If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professional's precision when it comes to diagnosing       benign lesions is over 99%.
+- If a skin lesion is clinically diagnosed as benign, I recommend that this model is not used, as medical professional's precision when it comes to diagnosing       benign lesions is over 99%%.
 
-- If a lesion is clinically diagnosed as malignant, and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is     not even half of a percent less precise than medical professionals in clinically diagnosing a lesion to be benign. 
+- If a lesion is clinically diagnosed as malignant, and the model predicts it to be benign, I recommend that the clinical diagnosis be rejected, as the model is     not even half of a percent less precise than medical professionals in clinically diagnosing a lesion to be benign at 98.63%. 
  
 - If a lesion is clinically diagnosed as malignant, and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be confirmed, as   the model only misdiagnoses benign lesions as either malignant or unknown 4.80% of the time.
 
