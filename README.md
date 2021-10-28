@@ -161,7 +161,7 @@ Examples of a misclassified image from each class with the pros and cons mask la
  
 - If a skin lesion is clinically diagnosed as being malignant, and the model predicts it to be malignant or unknown, I recommend that the clinical diagnosis be       confirmed, as the model only misdiagnoses benign lesions as being either malignant or unknown 4.80% of the time.
 
-- Finally, I recommend that this model be used to reduce the number of biopsies taken of benign lesions that were clinically diagnosed as malignant.
+- Finally, I recommend that this model be used to reduce the number of biopsies taken of misdiagnosed benign lesions.
 
 
 
