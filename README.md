@@ -34,19 +34,7 @@ Given those facts, a model could be used to identify misdiagnosed benign lesions
 
 ## Data Understanding
 
-My dataset consists of 7,179 dermoscopic images from the International Skin Imaging Collaboration(ISIC) archive (https://www.isic-archive.com/). All patients were 10-90 years old and the images were taken in the course of clinical care.
-
-<p align="center">
-  <img src='images/class_examples.png' width=550 height=150 />
-</p>
-
-The ISIC archive contains over 150,000 images, 70,000 of which have been made public. I downloaded only dermoscopic images to ensure a certain standard of quality across the dataset. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 980 images of benign lesions for testing. I downloaded 1500 dermoscopic images of malignant lesions for training and validation, and 600 for testing. I downloaded 1500 dermoscopic images of unknown lesions for training and validation, and 600 for testing. The class balance in my training set is 44.44% images of benign lesions, 27.78% images of malignant lesions, and 27.78% images of unknown lesions.
-
-<p align="center">
-  <img src='images/skin_lesion_class_balance.png' width=450 height=350 />
-</p>
-
-The following file structure provides the ground truth labeling needed to train the models. If you wish to run my code, you will need to download images from the ISIC archive into the same directory format:
+My dataset consists of 7,179 dermoscopic images of skin lesions from the International Skin Imaging Collaboration(ISIC) archive (https://www.isic-archive.com/). All patients were 10-90 years old and the images were taken in the course of clinical care.The following file structure provides the ground truth labeling needed to train the models. If you wish to run my code, you will need to download images from the ISIC archive into the same directory format:
 ```
 └── dermoscopic_images
     ├── train
@@ -58,6 +46,20 @@ The following file structure provides the ground truth labeling needed to train 
          ├──malignant
          └──unknown
 ```
+
+<p align="center">
+  <img src='images/class_examples.png' width=550 height=150 />
+</p>
+
+The ISIC archive contains over 150,000 images, 70,000 of which have been made public. The images can be downloaded from the gallery, and are labeled by  I downloaded only dermoscopic images to ensure a certain standard of quality across the dataset. The archive contains 23,704 dermoscopic images of benign lesions, 2,240 dermoscopic images of malignant lesions, and 2,212 dermoscopic images of unknown lesions. I downloaded 2,401 images of benign lesions for training and validation, and 980 images of benign lesions for testing. I downloaded 1500 dermoscopic images of malignant lesions for training and validation, and 600 for testing. I downloaded 1500 dermoscopic images of unknown lesions for training and validation, and 600 for testing. The class balance in my training set is 44.44% images of benign lesions, 27.78% images of malignant lesions, and 27.78% images of unknown lesions.
+
+<p align="center">
+  <img src='images/skin_lesion_class_balance.png' width=450 height=350 />
+</p>
+
+There is a significant limitation to the data contained in the archive. 
+
+
 
 
 
