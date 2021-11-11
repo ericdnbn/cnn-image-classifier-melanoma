@@ -175,7 +175,7 @@ Examples of a misclassified image from each class with the pros and cons mask la
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./skin_lesion_image_classifier.ipynb) or review this [presentation](./skin_lesion_image_classifier_presentation.pdf)
+See the full analysis in this [Jupyter Notebook](./skin_lesion_image_classifier.ipynb) or review this [presentation](./skin_lesion_image_classifier_presentation.pdf)
 
 
 
